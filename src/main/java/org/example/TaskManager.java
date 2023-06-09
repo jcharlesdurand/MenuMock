@@ -1,16 +1,17 @@
 package org.example;
 
-public class TaskManager {
-    private ApplicationConsole applicationConsole;
+import java.util.Scanner;
 
-    public TaskManager(ApplicationConsole applicationConsole){
-        this.applicationConsole = applicationConsole;
+public class TaskManager {
+    private Scanner scanner = new Scanner(System.in);
+
+    public TaskManager(){
     }
 
     public void menu() {
         while (true) {
-            applicationConsole.showMessage("Enter a command: (add, remove, mark, list, exit)");
-            String command = applicationConsole.readLine();
+            System.out.println("Enter a command: (add, remove, mark, list, exit)");
+            String command = scanner.nextLine();
 
             // add switch on command types
 
